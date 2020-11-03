@@ -1,0 +1,39 @@
+{% extends 'Card_App/base.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="col-md-2">
+        <a href="/log">Login</a>
+    </div>
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="firstname">Firstname</label>
+            <input type="text" name="firstname" class="form-control" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" name="lastname" class="form-control" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="mob">Contact Number</label>
+            <input type="tel" name="mob" class="form-control" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" required="required">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="c_password">C Password</label>
+            <input type="password" name="c_password" class="form-control" required="required"/>
+        </div>
+        <br />
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary form-control"><span class="glyphicon glyphicon-save"></span> Submit</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

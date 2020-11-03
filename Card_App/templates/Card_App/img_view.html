@@ -1,0 +1,26 @@
+{% extends 'Card_App/base.html' %}
+
+{% block title%} {{design.image}} Thank You!!!!{% endblock %}
+{% block body %}
+<div class="container my-4">
+    <div class="row">
+    <div class="col-md-4">
+    <div class="row">
+        <img src="/media/{{design.image}}" width="230px" height="390px">
+    </div>
+        <div class="row">
+            <input type="radio" name="joke" value="bed" /> Select
+            <form action="edit">
+           <input type="submit" value="Next">
+            </form>
+          <p class="mt-1"></p>
+        </div>
+
+    </div>
+
+    <div class="col-md-8">
+        <h5>{{design.name}}</h5>
+    </div>
+    </div>
+</div>
+{% endblock %}
